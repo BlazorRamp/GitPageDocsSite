@@ -1,7 +1,7 @@
 {
   "mainAssemblyName": "BlazorRamp.DocSite",
   "resources": {
-    "hash": "sha256-f7j4ndU3uIMiwSdxXMSBjMfSKz+2U+6oRanSVLtvAIw=",
+    "hash": "sha256-vKVUX37CvfhMq87dJnjtELsnqXpIwlCv0ddM3s4D2Gc=",
     "jsModuleNative": {
       "dotnet.native.js": "sha256-AlwvznbYtTfPMFBjZqh7Wj4D/MDuNAMT79h4fd0B7s0="
     },
@@ -50,7 +50,7 @@
       "BlazorRamp.BusyIndicator.wasm": "sha256-bObTGTfW17/MFl5IWmVLTmBkL2oDfHNrtOPRZXobeFo=",
       "BlazorRamp.Core.wasm": "sha256-YZc6Uw0fIjPLEScQnLJk+ARzPTLLDLDpEn5fxsrWnfw=",
       "BlazorRamp.SkipTo.wasm": "sha256-62Vgiiw73T5jhQcgm6IIqVwk+IhR9Kurv1SyDDGkP4Y=",
-      "BlazorRamp.DocSite.wasm": "sha256-+9VInCKjoZwvK2fFIURg2bmrZPUBAmZnoaXdKyXVsZs="
+      "BlazorRamp.DocSite.wasm": "sha256-pbFpJCxHaUPb7SfYLNJf4u5yoO+2gOdlheocaP7dhxM="
     },
     "libraryInitializers": {
       "_content/BlazorRamp.SkipTo/BlazorRamp.SkipTo.stdqqtlvh6.lib.module.js": "sha256-gDn/MyZNYGugVHwyVV5ds7Q/u0R7QAbnPgVnmm0AOv4="
