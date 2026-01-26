@@ -1,7 +1,7 @@
 {
   "mainAssemblyName": "BlazorRamp.DocSite",
   "resources": {
-    "hash": "sha256-Mc0w/G9/d2/B5igHQTjeOW/j8Mc1OkjiH0F3r53Ln5Q=",
+    "hash": "sha256-ufKdL+02B772XlSlYhB6Q/MThINjyyJOb1qT8Z3FPlU=",
     "jsModuleNative": {
       "dotnet.native.js": "sha256-AlwvznbYtTfPMFBjZqh7Wj4D/MDuNAMT79h4fd0B7s0="
     },
@@ -40,17 +40,17 @@
       "System.Memory.wasm": "sha256-ig3xZT0M1BvhafYi5XtwQIoTMrSfH9TtQKq4lRFvGQ8=",
       "System.Net.Http.wasm": "sha256-3htGxpxYff39+jV7LoouPCrUdfclRo+D7if8I/yhWo0=",
       "System.Net.Primitives.wasm": "sha256-h7OMygXcLfv3yS7oYcfmRdLJJUVN7MbIBGVZOuOvonM=",
-      "System.Private.Uri.wasm": "sha256-yrg7SmeyYnV5yopgdv8At+v8IJXgcZqtdQ8XGfqpby0=",
+      "System.Private.Uri.wasm": "sha256-Rkx3zdIUiWHjfJHIpDOSYMnSSz6a63habZq2Tdfgx1U=",
       "System.Runtime.InteropServices.JavaScript.wasm": "sha256-6hdGkh80Le78a9cg0/X1jE6bN7MJcXfdZhyjTFvqx4M=",
-      "System.Runtime.wasm": "sha256-7FrySVMqMxez29zxubRf+o5jrczK7mmrySWT3fjEcAs=",
+      "System.Runtime.wasm": "sha256-EILhcOsN/+xoNCEo/9bb1uRJh2gqsPHpMiAcgk1V07U=",
       "System.Text.Encodings.Web.wasm": "sha256-QlEAY71V5tn3FS4QI+N/MDAf43l3aWX0SFMMJbfw3C8=",
       "System.Text.Json.wasm": "sha256-fWPU70PwcfQcIUd8OtvLIFSBBfHRS9U5cl+f0qELQBA=",
       "System.Text.RegularExpressions.wasm": "sha256-nE7XCiyeCswUnRGdXOQvcHP+XMWXcToACrazpZlocBI=",
       "System.Private.CoreLib.wasm": "sha256-Bp/ZtCmurzhEeOVANcHyCVcHBV5yvE7WB91nYGTtxpE=",
-      "BlazorRamp.BusyIndicator.wasm": "sha256-Ex02R+wY0Vr+6LVmUbkWJeD/01qfy4eZ2w/k4mXIQNk=",
-      "BlazorRamp.Core.wasm": "sha256-l36htLVSJlPM0fX4TnRYtsc67uJ8WCOyyvMaFIUNfpM=",
-      "BlazorRamp.SkipTo.wasm": "sha256-6vzo6ecvOcw0xsRKQ+ERTRQYk3YDpXajdBCa8NMLPCU=",
-      "BlazorRamp.DocSite.wasm": "sha256-VNeM8V8pJESMdlUuog91DwTqnguA5VPOQDlG3ur1AzQ="
+      "BlazorRamp.BusyIndicator.wasm": "sha256-Q4kgEbvDyqW8aRm5Uf6CkLnXV0rAUyFg+lvKociwkik=",
+      "BlazorRamp.Core.wasm": "sha256-YZc6Uw0fIjPLEScQnLJk+ARzPTLLDLDpEn5fxsrWnfw=",
+      "BlazorRamp.SkipTo.wasm": "sha256-62Vgiiw73T5jhQcgm6IIqVwk+IhR9Kurv1SyDDGkP4Y=",
+      "BlazorRamp.DocSite.wasm": "sha256-+9VInCKjoZwvK2fFIURg2bmrZPUBAmZnoaXdKyXVsZs="
     },
     "libraryInitializers": {
       "_content/BlazorRamp.SkipTo/BlazorRamp.SkipTo.iqfsi1obev.lib.module.js": "sha256-qnTsdALMNMR70pLOn6tQ0YLVE21dhl52qWpBm/I14lk="
