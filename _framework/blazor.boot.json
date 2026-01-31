@@ -1,7 +1,7 @@
 {
   "mainAssemblyName": "BlazorRamp.DocSite",
   "resources": {
-    "hash": "sha256-9CAVow7LcopW/WJ+6mvGo5lHKGwhYXK05lb+9u9b6wY=",
+    "hash": "sha256-369hZUFj7GBW8F8jXZ2xXq078dCtS5aoZ8q5ktMIOg0=",
     "jsModuleNative": {
       "dotnet.native.js": "sha256-AlwvznbYtTfPMFBjZqh7Wj4D/MDuNAMT79h4fd0B7s0="
     },
@@ -9,7 +9,7 @@
       "dotnet.runtime.js": "sha256-TGUqQm2/C+r+yZ5BCjd72qyLw9wv0KPFKzKXk/giiyY="
     },
     "wasmNative": {
-      "dotnet.native.wasm": "sha256-JYaQMUS/VCOgRTzaf1T3bfO4yXQo18UGF43W7ah2yIU="
+      "dotnet.native.wasm": "sha256-sq5wQED+z8+z7/yVhvXQKKjzBSbSPHzxJWD3ze33h44="
     },
     "icu": {
       "icudt_CJK.dat": "sha256-SZLtQnRc0JkwqHab0VUVP7T3uBPSeYzxzDnpxPpUnHk=",
@@ -46,11 +46,11 @@
       "System.Text.Encodings.Web.wasm": "sha256-QlEAY71V5tn3FS4QI+N/MDAf43l3aWX0SFMMJbfw3C8=",
       "System.Text.Json.wasm": "sha256-fWPU70PwcfQcIUd8OtvLIFSBBfHRS9U5cl+f0qELQBA=",
       "System.Text.RegularExpressions.wasm": "sha256-nE7XCiyeCswUnRGdXOQvcHP+XMWXcToACrazpZlocBI=",
-      "System.Private.CoreLib.wasm": "sha256-Bp/ZtCmurzhEeOVANcHyCVcHBV5yvE7WB91nYGTtxpE=",
-      "BlazorRamp.BusyIndicator.wasm": "sha256-lxPU/91QLm3Hx7OfDrp9TAD3ihZnU1Wi3aNe5eYlO3o=",
-      "BlazorRamp.Core.wasm": "sha256-HMd5uSIKqmnl8DmXRjY57SONo5BjXOk9LjQJbxP5PuI=",
-      "BlazorRamp.SkipTo.wasm": "sha256-pDPML+59W5I8do1Y1s1Vt/siJPGgX7In/WO2AB2itww=",
-      "BlazorRamp.DocSite.wasm": "sha256-VtijIkfZgslxPdh21yeYpoSKca6WBGo5MzpHVdM61Qo="
+      "System.Private.CoreLib.wasm": "sha256-7Z5KNWYgINXctLvrNmvSclU3fJE0AtWmtCvSMK+OEuc=",
+      "BlazorRamp.BusyIndicator.wasm": "sha256-XqwW5N6TirFPZBUqnitPkqKJhYIqmgMQkbYjrk9Nuy0=",
+      "BlazorRamp.Core.wasm": "sha256-WYYoc7DDydtwKzxbFIwn9enLR5bdFzACY1RzghxWLhA=",
+      "BlazorRamp.SkipTo.wasm": "sha256-yMiPnOA/AkvQbEv9PS1/W3NJIrsO0GLsSwiZPwFFqNs=",
+      "BlazorRamp.DocSite.wasm": "sha256-gEaYSaj5Z0sWKUUMlZK7w2O9AD9oOZMhBi+uJz9/o2Y="
     },
     "libraryInitializers": {
       "_content/BlazorRamp.SkipTo/BlazorRamp.SkipTo.3pad8xurmj.lib.module.js": "sha256-Z0O8diHEeSIfPnnq1HVFS6TH2sRcqr6f2XiS/74nE74="
