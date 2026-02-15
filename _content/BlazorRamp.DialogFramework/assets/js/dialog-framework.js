@@ -7,8 +7,11 @@ const openModalDialog = (elementID) => {
         return;
     if (!_cancelHandlerMap.has(modalDialog))
         addCancelEscapeHandler(modalDialog);
-    if (!modalDialog.open)
+    if (!modalDialog.open) {
         modalDialog.showModal();
+        const dialogwindow = modalDialog.querySelector('.br-dialog-framework__window');
+        dialogwindow?.focus();
+    }
 };
 const closeModalDialog = (elementID) => {
     const modalDialog = getModalDialog(elementID);
@@ -25,7 +28,7 @@ const addCancelEscapeHandler = (modalDialog) => {
     const handler = (event) => {
         if (event.key === "Escape") {
             if (historyDialog.matches(':popover-open')) {
-                event.stopPropagation(); //stop blazor getting the event which it uses to notify dialog component
+                event.stopPropagation(); //stop blazor getting the event which it uses to notify the dialog component
                 return; // Allow escape to work normally for announcement history
             }
             event.preventDefault();
