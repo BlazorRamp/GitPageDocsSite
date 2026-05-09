@@ -403,6 +403,7 @@
   --br-code-block-text: var(--br-unit-colour-info-lighter);
   --br-comp-input-error-colour: var(--br-unit-colour-danger-light);
   --br-comp-input-success-colour: var(--br-unit-colour-success-light);
+  --br-comp-input-es-error-colour: var(--br-unit-colour-danger-light);
 }
 
 *,
@@ -544,7 +545,7 @@ body #app__main {
   font-size: var(--br-unit-font-size-label);
 }
 .main-navigation__heading {
-  font-size: var(--br-unit-font-size-3);
+  font-size: var(--br-unit-font-size-2);
   font-weight: var(--br-unit-font-weight-500);
   margin-bottom: var(--br-unit-space-3);
   color: var(--br-comp-all-area-header-text);
