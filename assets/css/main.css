@@ -218,7 +218,7 @@
   scrollbar-width: thin;
   scrollbar-color: transparent transparent;
 }
-#app__nav:hover {
+#app__nav:hover, #app__nav:focus-within {
   scrollbar-color: var(--br-cls-neutral-dark) transparent;
 }
 #app__main {
