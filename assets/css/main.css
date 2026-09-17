@@ -240,9 +240,14 @@
 #app:has(#menu-toggler[aria-expanded=false]) #app__nav {
   display: none;
 }
+#app:has(#menu-toggler[aria-expanded=false]) #app__main {
+  margin: var(--br-unit-space-5);
+}
 @media (max-width: 576px) {
-  #app:has(#menu-toggler[aria-expanded=false]) #app__main {
-    margin: var(--br-unit-space-5);
+  #app {
+    /*        #app__main {
+                margin: var(--br-unit-space-5);
+            }*/
   }
   #app:has(#menu-toggler[aria-expanded=true]) #app__main {
     display: none;
@@ -659,6 +664,14 @@ h2:focus-visible {
   mask-size: 100% 100%;
   mask-position: center;
   forced-color-adjust: none;
+}
+
+.site-logo {
+  display: block; /* Removes baseline line-height spacing */
+  width: 100%; /* Fits fluidly to its parent container */
+  max-width: 150px; /* Adjust maximum size as needed */
+  height: auto; /* Maintains aspect ratio without vertical stretching */
+  margin: 0 auto; /* Centers horizontally with zero top/bottom margin */
 }
 
 .main-navigation > ul {
