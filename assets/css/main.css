@@ -17,9 +17,10 @@
 #app__header > span:first-child {
   color: var(--br-comp-all-area-header-text);
   font-size: var(--br-unit-font-size-3);
-  white-space: nowrap;
+  /*            white-space: nowrap;
   overflow: hidden;
-  text-overflow: ellipsis;
+  text-overflow: ellipsis;*/
+  order: -2;
 }
 #app__header #menu-toggler {
   margin-top: var(--br-unit-space-2);
@@ -246,8 +247,8 @@
 @media (max-width: 576px) {
   #app {
     /*        #app__main {
-                margin: var(--br-unit-space-5);
-            }*/
+        margin: var(--br-unit-space-5);
+    }*/
   }
   #app:has(#menu-toggler[aria-expanded=true]) #app__main {
     display: none;
@@ -667,11 +668,20 @@ h2:focus-visible {
 }
 
 .site-logo {
-  display: block; /* Removes baseline line-height spacing */
-  width: 100%; /* Fits fluidly to its parent container */
-  max-width: 150px; /* Adjust maximum size as needed */
-  height: auto; /* Maintains aspect ratio without vertical stretching */
-  margin: 0 auto; /* Centers horizontally with zero top/bottom margin */
+  display: block;
+  width: 100%;
+  max-width: 150px;
+  height: auto;
+  min-width: 120px;
+  margin-top: 0.125rem;
+}
+
+.logo-top {
+  fill: var(--br-cls-primary);
+}
+
+.logo-bottom {
+  fill: var(--br-unit-colour-canvas-text);
 }
 
 .main-navigation > ul {
