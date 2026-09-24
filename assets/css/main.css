@@ -24,6 +24,7 @@
   margin-top: -0.5rem;
 }
 #app__header #menu-toggler {
+  order: -1;
   flex-shrink: 0;
   appearance: none;
   border: none;
