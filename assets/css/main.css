@@ -239,11 +239,9 @@
 #app:has(#menu-toggler[aria-expanded=false]) #app__main {
   margin: var(--br-unit-space-5);
 }
-@media (max-width: 576px) {
-  #app {
-    /*        #app__main {
-        margin: var(--br-unit-space-5);
-    }*/
+@media (max-width: 768px) {
+  #app #app__main {
+    margin: var(--br-unit-space-5);
   }
   #app:has(#menu-toggler[aria-expanded=true]) #app__main {
     display: none;
@@ -1202,6 +1200,7 @@ h2:focus-visible {
   min-height: 0;
   flex: 1 1 auto;
   border-radius: var(--br-group-dialog-area-content-border-radius);
+  scrollbar-width: thin;
 }
 .theme-dialog__scroll-region:focus-visible {
   outline-offset: var(--br-comp-all-outline-offset);
