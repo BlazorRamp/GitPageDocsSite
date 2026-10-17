@@ -20,6 +20,8 @@ const showGoTo = (markerId, popoverId) => {
         return;
     if (popoverLabelElement.matches(':popover-open'))
         return;
+    // Already in view for keyboard users, so a no-op there; brings it into view otherwise
+    markerElement.scrollIntoView({ block: "start" });
     popoverLabelElement.showPopover({ source: markerElement });
     markerElement.addEventListener("focusout", hidePopoverOnFocusout, { once: true });
 };
