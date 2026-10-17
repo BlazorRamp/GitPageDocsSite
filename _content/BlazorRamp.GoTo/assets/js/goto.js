@@ -22,7 +22,6 @@ const showGoTo = (markerId, popoverId) => {
     if (popoverLabelElement.matches(':popover-open'))
         return;
     popoverLabelElement.showPopover({ source: markerElement });
-    popoverLabelElement.focus();
     markerElement.addEventListener("focusout", hidePopoverOnFocusout, { once: true });
 };
 const scrollMarkerIntoView = (markerId) => {
