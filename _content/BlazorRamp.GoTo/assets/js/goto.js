@@ -110,10 +110,14 @@ const registerGotoComponent = (dotNetRef, callBackName, gotoViewerId) => {
         return;
     document.getElementById(gotoViewerId)?.addEventListener("keydown", handleViewerKeyDown);
     document.addEventListener("keydown", (event) => {
-        if (event.ctrlKey && event.shiftKey && event.key.toUpperCase() === "Y") {
-            event.preventDefault();
-            callBlazor(dotNetRef, callBackName);
-        }
+        if (!(event.ctrlKey && event.shiftKey && event.key.toUpperCase() === "Y"))
+            return;
+        const gotoViewerElement = document.getElementById(gotoViewerId);
+        // No viewer, a modal dialog or fullscreen element is open, or the page is inert:
+        if (!gotoViewerElement || document.querySelector(":modal") || gotoViewerElement.closest("[inert]"))
+            return;
+        event.preventDefault();
+        callBlazor(dotNetRef, callBackName);
     });
     _gotoComponentRegistered = true;
 };
