@@ -1,7 +1,21 @@
 ;
+;
 const _dataAttribute = "data-br-goto";
 const _currentAttribute = "data-br-goto-current";
 let _gotoComponentRegistered = false;
+let _shortcut = null;
+const matchesShortcut = (e, s) => {
+    // Exact modifier match, which also rules out AltGr (reported as Ctrl + Alt) when Ctrl isn't wanted
+    if (e.altKey !== s.alt || e.ctrlKey !== s.ctrl || e.shiftKey !== s.shift || e.metaKey !== s.meta)
+        return false;
+    const key = s.key.toLowerCase();
+    const code = /^[a-z]$/.test(key) ? `Key${key.toUpperCase()}` : `Digit${key}`;
+    // event.code is the physical key, so it still matches when Option/Alt types a different character on a Mac
+    return e.code === code || e.key.toLowerCase() === key;
+};
+const setGoToShortcut = (shortcut) => {
+    _shortcut = shortcut;
+};
 const clearCurrentMarker = () => {
     for (const marker of document.querySelectorAll(`[${_currentAttribute}]`)) {
         marker.removeAttribute(_currentAttribute);
@@ -13,6 +27,18 @@ const hidePopoverOnFocusout = (e) => {
     if (popover?.matches(":popover-open"))
         popover.hidePopover();
 };
+const pageIsNotUserScrollable = () => {
+    const htmlOverflow = getComputedStyle(document.documentElement).overflowY;
+    const effective = htmlOverflow !== "visible" ? htmlOverflow : getComputedStyle(document.body).overflowY;
+    return effective === "hidden" || effective === "clip";
+};
+const scrollMarkerTo = (marker) => {
+    const root = document.documentElement;
+    const before = root.scrollTop;
+    marker.scrollIntoView({ block: "start" });
+    if (pageIsNotUserScrollable())
+        requestAnimationFrame(() => { root.scrollTop = before; });
+};
 const showGoTo = (markerId, popoverId) => {
     const markerElement = document.getElementById(markerId);
     const popoverLabelElement = document.getElementById(popoverId);
@@ -20,11 +46,7 @@ const showGoTo = (markerId, popoverId) => {
         return;
     if (popoverLabelElement.matches(':popover-open'))
         return;
-    // Already in view for keyboard users, so a no-op there; brings it into view otherwise
-    markerElement.scrollIntoView({ block: "start" });
-    requestAnimationFrame(() => {
-        document.documentElement.scrollTop = 0;
-    });
+    scrollMarkerTo(markerElement);
     popoverLabelElement.showPopover({ source: markerElement });
     markerElement.addEventListener("focusout", hidePopoverOnFocusout, { once: true });
 };
@@ -34,10 +56,7 @@ const scrollMarkerIntoView = (markerId) => {
     if (!markerElement)
         return;
     markerElement.setAttribute(_currentAttribute, "");
-    markerElement.scrollIntoView({ block: "start" });
-    requestAnimationFrame(() => {
-        document.documentElement.scrollTop = 0;
-    });
+    scrollMarkerTo(markerElement);
 };
 const getGoToData = () => {
     clearCurrentMarker();
@@ -136,12 +155,13 @@ const registerGoToVieweHandlers = (gotoViewerId) => {
     viewerPopover.addEventListener("keydown", handleViewerKeyDown);
     viewerPopover.addEventListener("focusout", handler);
 };
-const registerGoToComponent = (dotNetRef, callBackName, gotoViewerId) => {
+const registerGoToComponent = (dotNetRef, callBackName, gotoViewerId, shortcut) => {
     if (!dotNetRef || true === _gotoComponentRegistered)
         return;
+    _shortcut = shortcut;
     registerGoToVieweHandlers(gotoViewerId);
     document.addEventListener("keydown", (event) => {
-        if (!(event.ctrlKey && event.shiftKey && event.key.toUpperCase() === "Y"))
+        if (!_shortcut || event.repeat || !matchesShortcut(event, _shortcut))
             return;
         const gotoViewerElement = document.getElementById(gotoViewerId);
         // No viewer, a modal dialog or fullscreen element is open, or the page is inert:
@@ -152,5 +172,5 @@ const registerGoToComponent = (dotNetRef, callBackName, gotoViewerId) => {
     });
     _gotoComponentRegistered = true;
 };
-export { showGoTo, getGoToData, registerGoToComponent, scrollMarkerIntoView, showGoToViewer, closeGoToViewer };
+export { showGoTo, getGoToData, registerGoToComponent, setGoToShortcut, scrollMarkerIntoView, showGoToViewer, closeGoToViewer };
 //# sourceMappingURL=goto.js.map
